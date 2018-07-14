@@ -1,0 +1,33 @@
+import React from 'react';
+import { View } from 'react-native';
+
+const Card = (props) => (
+  //The code below takes an array of two styles.
+  //by default it will use the one on the marginLeft
+  //UNLESS we otherwise pass in a custom style in other parts of our app
+  //use the Card component.
+    <View style={[styles.containerStyle, props.style]}>
+    {props.children}
+    </View>
+   );
+
+
+const styles = {
+  containerStyle: {
+    borderWidth: 1,
+    borderRadius: 2,
+    borderColor: '#ddd',
+    backgroundColor: '#faebd7',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 5,
+    marginRight: 5
+
+  }
+};
+
+export { Card };
